@@ -1,0 +1,34 @@
+package com.iso.iso_engine.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import com.iso.iso_engine.model.DeviceKeyMapping;
+
+public class DeviceKeyMappingServiceImp implements DeviceKeyMappingInterface {
+
+	@Override
+	public DeviceKeyMapping createDeviceKeyMapping(DeviceKeyMapping deviceKeyMapping) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<DeviceKeyMapping> getAllDeviceKeyMappings() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Optional<DeviceKeyMapping> getDeviceKeyMappingById(Long id) {
+		// TODO Auto-generated method stub
+		return Optional.empty();
+	}
+
+	@Override
+	public DeviceKeyMapping updateDeviceKeyMapping(DeviceKeyMapping deviceKeyMapping) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

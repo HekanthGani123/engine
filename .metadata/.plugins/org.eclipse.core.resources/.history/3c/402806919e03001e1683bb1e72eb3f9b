@@ -1,0 +1,38 @@
+package com.iso.iso_engine.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.iso.iso_engine.model.DeviceKeyMapping;
+import com.iso.iso_engine.repository.DeviceKeyMappingRepository;
+
+@Service
+public class DeviceKeyMappingServiceImp implements DeviceKeyMappingInterface {
+	
+	@Autowired
+	private  DeviceKeyMappingRepository deviceKeyMappingRepository;
+
+	@Override
+	 public DeviceKeyMapping createDeviceKeyMapping(DeviceKeyMapping deviceKeyMapping) {
+        return deviceKeyMappingRepository.save(deviceKeyMapping);
+    }
+
+	@Override
+	public List<DeviceKeyMapping> getAllDeviceKeyMappings() {
+        return deviceKeyMappingRepository.findAll();
+    }
+
+	@Override
+	public Optional<DeviceKeyMapping> getDeviceKeyMappingById(Long id) {
+        return deviceKeyMappingRepository.findById(id);
+    }
+
+	@Override
+	public DeviceKeyMapping updateDeviceKeyMapping(DeviceKeyMapping deviceKeyMapping) {
+        return deviceKeyMappingRepository.save(deviceKeyMapping);
+    }
+
+}

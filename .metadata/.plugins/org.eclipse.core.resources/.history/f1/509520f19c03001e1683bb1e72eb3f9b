@@ -1,0 +1,5 @@
+package com.iso.iso_engine.repository;
+
+public interface S {
+
+}

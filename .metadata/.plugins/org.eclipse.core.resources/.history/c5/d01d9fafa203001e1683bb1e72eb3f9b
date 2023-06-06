@@ -1,0 +1,18 @@
+package com.iso.iso_engine.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.iso.iso_engine.service.DeviceKeyMappingServiceImp;
+
+@RestController
+@RequestMapping("/device-key-mappings")
+public class DeviceKeyMappingController {
+	
+
+	@Autowired
+    private  DeviceKeyMappingServiceImp deviceKeyMappingService;
+
+   
+}

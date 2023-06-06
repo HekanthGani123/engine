@@ -1,0 +1,29 @@
+package com.iso.iso_engine.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.iso.iso_engine.model.DeviceKeyMapping;
+import com.iso.iso_engine.service.DeviceKeyMappingServiceImp;
+
+@RestController
+@RequestMapping("/device-key-mappings")
+public class DeviceKeyMappingController {
+	
+
+	@Autowired
+    private  DeviceKeyMappingServiceImp deviceKeyMappingService;
+	
+	@PostMapping("/createDeviceKey")
+	public ResponseEntity<DeviceKeyMapping> saveDeviceKey(@RequestBody DeviceKeyMapping deviceKeyMapping){
+		return new ResponseEntity<DeviceKeyMapping>(deviceKeyMappingService.createDeviceKeyMapping(deviceKeyMapping),HttpStatus.CREATED);
+	}
+
+   
+}
